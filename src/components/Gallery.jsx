@@ -7,45 +7,45 @@ const Gallery = () => {
   const products = [
     {
       id: 1,
-      name: 'Custom Desk Lamp',
+      name: 'Galaxy Desk Lam',
       category: 'Lighting',
-      description: 'Personalized desk lamp with your name engraved',
-      image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500',
+      description: 'Soft gradient lighting effect for your workspace',
+      image: new URL('../public/images/Denban.png.png', import.meta.url).href,
     },
     {
       id: 2,
-      name: '3D Printed Vase',
+      name: 'Aurora Vase',
       category: 'Home Decor',
-      description: 'Modern geometric vase for your living space',
-      image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500',
+      description: 'Striking gradient patterns, perfect for a modern living room',
+      image: new URL('../public/images/binhhoa.png.png', import.meta.url).href,
     },
     {
       id: 3,
-      name: 'Custom Phone Stand',
-      category: 'Accessories',
-      description: 'Ergonomic phone stand with unique design',
-      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500',
+      name: 'Nebula Plant Pot',
+      category: 'Home Decor',
+      description: 'Unique honeycomb design to highlight any plant',
+      image: new URL('../public/images/chauhoa.png.png', import.meta.url).href,
     },
     {
       id: 4,
-      name: 'Wall Art Sculpture',
-      category: 'Art',
-      description: 'Abstract 3D wall art piece',
-      image: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=500',
+      name: 'Orbit Hook',
+      category: 'Accessories',
+      description: 'Utility meets aesthetics for your home entrance',
+      image: new URL('../public/images/moctreo.png.png', import.meta.url).href,
     },
     {
       id: 5,
-      name: 'Custom Key Holder',
+      name: 'Celestial Stand',
       category: 'Accessories',
-      description: 'Personalized key holder with your design',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500',
+      description: 'Keep your belongings tidy with a futuristic design',
+      image: new URL('../public/images/giado.png.png', import.meta.url).href,
     },
     {
       id: 6,
-      name: 'Plant Pot Set',
-      category: 'Home Decor',
-      description: 'Set of modern geometric plant pots',
-      image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500',
+      name: 'Cosmos Wall Art',
+      category: 'Art',
+      description: '3D block shape adds depth to large wall art',
+      image: new URL('../public/images/tranh.png.png', import.meta.url).href,
     },
   ]
 
@@ -74,14 +74,12 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Eye className="w-12 h-12 text-white" />
-                    </div>
-                    <p className="text-gray-600 font-semibold">{product.name}</p>
-                  </div>
-                </div>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
 
                 {/* Hover Overlay */}
                 <div

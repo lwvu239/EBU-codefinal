@@ -4,14 +4,14 @@ import { Star, Quote } from 'lucide-react'
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Nguyễn Văn H',
+      name: 'Nguyen Van H',
       role: 'Designer',
       rating: 5,
       text: 'VibePrint đã giúp tôi tạo ra những món đồ trang trí độc đáo cho không gian làm việc. Chất lượng in 3D tuyệt vời và dịch vụ chăm sóc khách hàng rất chuyên nghiệp!',
       avatar: '👨‍💼',
     },
     {
-      name: 'Trần Thị Kim H',
+      name: 'Tran Thi Kim H',
       role: 'Home Owner',
       rating: 5,
       text: 'Tôi đã đặt một bộ chậu cây tùy chỉnh và kết quả vượt quá mong đợi. Sản phẩm đẹp, bền và giá cả hợp lý. Sẽ quay lại đặt hàng nhiều lần nữa!',

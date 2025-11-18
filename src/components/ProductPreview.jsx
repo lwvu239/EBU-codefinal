@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { RotateCw, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react'
 
+const dinosaurPreviewImage = new URL('../public/images/khunglong.png.webp', import.meta.url).href
+
 const ProductPreview = () => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 })
   const [zoom, setZoom] = useState(1)
@@ -87,15 +89,19 @@ const ProductPreview = () => {
                 {/* 3D Product Mockup */}
                 <div className="relative w-64 h-64 md:w-80 md:h-80">
                   {/* Main Product Shape */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary via-blue-500 to-secondary rounded-3xl shadow-2xl transform rotate-12">
-                    <div className="absolute inset-4 bg-gradient-to-tr from-white/30 to-transparent rounded-2xl"></div>
-                    <div className="absolute top-8 left-8 w-16 h-16 bg-white/40 rounded-full blur-xl"></div>
-                    <div className="absolute bottom-8 right-8 w-24 h-24 bg-secondary/40 rounded-full blur-xl"></div>
+                  <div className="absolute inset-0 rounded-3xl shadow-2xl transform rotate-6 overflow-hidden border border-white/30 bg-gradient-to-br from-white/20 via-blue-100 to-secondary/30">
+                    <img
+                      src={dinosaurPreviewImage}
+                      alt="3D printed dinosaur figure"
+                      className="w-full h-full object-contain p-6"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent mix-blend-multiply pointer-events-none"></div>
                   </div>
-                  
+
                   {/* Decorative Elements */}
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-secondary/30 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/30 rounded-full blur-2xl"></div>
+                  <div className="absolute -top-6 -right-6 w-24 h-24 bg-secondary/30 rounded-full blur-3xl"></div>
+                  <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-primary/30 rounded-full blur-3xl"></div>
                 </div>
               </div>
 

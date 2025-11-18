@@ -1,5 +1,7 @@
 import React from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+
+const catMockupImage = new URL('../public/images/meo.png.webp', import.meta.url).href
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -24,10 +26,13 @@ const Hero = () => {
       {/* 3D Mockup Placeholder */}
       <div className="absolute right-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
         <div className="relative w-96 h-96">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20 transform rotate-6 hover:rotate-12 transition-transform duration-500 shadow-2xl">
-            <div className="p-8 h-full flex items-center justify-center">
-              <Sparkles className="w-32 h-32 text-white opacity-80" />
-            </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20 transform rotate-6 hover:rotate-12 transition-transform duration-500 shadow-2xl overflow-hidden">
+            <img
+              src={catMockupImage}
+              alt="3D printed cat lamp mockup"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-3xl backdrop-blur-sm border border-secondary/20 transform -rotate-6 -z-10 shadow-xl"></div>
         </div>
@@ -41,7 +46,7 @@ const Hero = () => {
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Print your vibe {' '}
-            <span className="text-secondary">Make it real</span>
+            <span className="text-secondary-400">Make it real</span>
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             Transform your ideas into stunning 3D decorations. From personalized
